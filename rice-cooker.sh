@@ -3,21 +3,15 @@
 # First-time setup script for cooking up the rice
 
 # Ensures that the script is run as root
-if [ "$EUID" -ne 0 ]
-  then echo "Please run as root"
-  exit
-fi
+# if [ "$EUID" -ne 0 ]
+#   then echo "Please run as root"
+#   exit
+# fi
 
 # Clone and link dotfiles first (so that the .config directory doesn't cause issues later)
 git clone https://github.com/PhilMathew/dotfiles.git
 cd dotfiles
-chmod +x \ # makes all the launch scripts executable files
-    config/dunst/launch.sh \
-    config/plank/launch.sh \
-    config/polybar/tpm-cherryblocks/launch.sh \
-    config/polybar/tpm-cherryblocks/spotifystatus.sh \
-    config/rofi/launcher/launcher.sh \
-    config/rofi/powermenu/powermenu.sh 
+chmod +x config/dunst/launch.sh config/plank/launch.sh config/polybar/tpm-cherryblocks/launch.sh config/polybar/tpm-cherryblocks/spotifystatus.sh config/rofi/launcher/launcher.sh config/rofi/powermenu/powermenu.sh 
 apt install stow # symlinking utility
 sh stow-dirs.sh # makes symlinks 
 
@@ -25,23 +19,10 @@ sh stow-dirs.sh # makes symlinks
 pip3 install pywal
 
 # Installs apt packages
-apt install -y \
-    bspwm \ # window manager
-    alacritty \ # terminal emulator
-    zsh \ # shell
-    feh \ # wallpaper setter
-    neofetch \ # system info utility
-    rofi \ # all the menus
-    polybar \ # status bars
-    plank \ # dock
-    dunst \ # notifications
-    oomox \ # theming
-    spotify-client \ # only doing this because spicetify needs it to exist (also not like I'm using a different app anyway so like...)
-    thunar \ # file explorer (it's better than nautilus)
-    zathura # PDF reader
+apt install -y bspwm alacritty zsh feh neofetch rofi polybar plank dunst oomox spotify-client thunar zathura
 
 # Oh-My-ZSH and Powerlevel10k (along with its fonts)
-$ TODO ADD FONT INSTALLS
+# TODO ADD FONT INSTALLS
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" # oh-my-zsh 
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k # powerlevel10k theme
 
