@@ -1,6 +1,6 @@
 #!/bin/bash
 
-dunstify -u LOW "Regenerating themes..."
+notify-send -u LOW "Regenerating themes..."
 
 # Oomox (gtk) theme
 oomox-materia-cli -t ~/.themes -o wal-oomox ~/.cache/wal/colors-oomox
@@ -13,4 +13,4 @@ killall spotify
 # Dunst (it's weird man)
 sh ~/.config/dunst/launch.sh
 
-dunstify -u LOW "Theme successfully regenerated!"
+notify-send -u LOW "Theme successfully regenerated!"

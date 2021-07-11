@@ -37,9 +37,9 @@ bspc rule -a Gnome-system-monitor state=floating
 # Wallpaper Stuff
 feh --bg-fill "$WP_PATH" & # sets wallpaper on login
 
-wal -i "$WP_PATH" -n & # invokes pywal with image and also colors dunst accordingly
+wal -i "$WP_PATH" -n # invokes pywal with image and also colors dunst accordingly
 
-. "$HOME/.cache/wal/colors.sh" & # sets a color theme based on the wallpaper
+. "$HOME/.cache/wal/colors.sh" # sets a color theme based on the wallpaper
 
 # Configures colors for windows
 bspc config normal_border_color "$color1"
@@ -47,10 +47,7 @@ bspc config active_border_color "$color2"
 bspc config focused_border_color "$color15"
 
 # Launch polybar
-$HOME/.config/polybar/tpm-cherryblocks/launch.sh &
-
-# Launch eww daemon
-eww daemon
+sh $HOME/.config/polybar/tpm-cherryblocks/launch.sh
 
 # Launch picom
 picom &
@@ -63,4 +60,4 @@ sh $HOME/.config/plank/launch.sh
 sh $HOME/.config/dunst/launch.sh
 
 # Notify user we're done loading
-dunstify -u LOW "Loaded BSPWM, remember to regenerate themes if necessary"
+notify-send -u LOW "Loaded BSPWM, remember to regenerate themes if necessary"

@@ -1,3 +1,5 @@
+#!/bin/bash
+
 cd $HOME/dotfiles
 
 stow config --adopt

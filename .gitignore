@@ -15,6 +15,9 @@ config/.config/*
 
 !**/neofetch
 
+!**/plank/
+**/plank/dock*
+
 !**/picom
 
 !**/polybar
