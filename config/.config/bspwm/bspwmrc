@@ -12,7 +12,7 @@ export CURSORS_PATH="$HOME/.icons/Sweet-cursors/cursors/left_ptr"
 
 # bspwm initialization and config
 pgrep -x sxhkd > /dev/null || sxhkd & # runs sxhkd for the keybinds
-bspc monitor -d I II III IV V VI VII VIII IX X # creates workspaces
+bspc monitor DP-4 -d I II III IV V VI VII VIII IX X # creates workspaces
 
 xsetroot -xcf "$CURSORS_PATH" 24 & # sets the bloody cursor to not be a fugly X
 
