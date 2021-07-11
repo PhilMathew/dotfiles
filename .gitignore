@@ -1,0 +1,16 @@
+# Exclude files and directories in top directory
+.config/*
+
+!.gitignore
+!.zshrc
+!.zshenv
+!.config/alacritty/
+!.config/bspwm
+!.config/dunst
+!.config/neofetch
+!.config/picom
+!.config/polybar
+!.config/rofi
+!.config/spicetify/Themes
+!.config/sxhkd
+!.config/wal/templates

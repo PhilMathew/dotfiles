@@ -1,0 +1,64 @@
+#! /bin/sh
+
+xrandr --output DP-4 --primary --left-of DP-0
+
+# Get wallpaper path (allows it to be set from Ubuntu settings app)
+export WP_URI=$(gsettings get org.gnome.desktop.background picture-uri)
+export WP_PATH=$(echo "$WP_URI" | sed -E 's/^\s*.*:\/\///g')
+export WP_PATH=${WP_PATH%\'}
+
+# Specifies default cursor's path
+export CURSORS_PATH="$HOME/.icons/Sweet-cursors/cursors/left_ptr"
+
+# bspwm initialization and config
+pgrep -x sxhkd > /dev/null || sxhkd & # runs sxhkd for the keybinds
+bspc monitor -d I II III IV V VI VII VIII IX X # creates workspaces
+
+xsetroot -xcf "$CURSORS_PATH" 24 & # sets the bloody cursor to not be a fugly X
+
+# Pretty self-explanatory
+bspc config border_width         2
+bspc config window_gap          10
+
+bspc config split_ratio          0.52
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+
+bspc config -m DP-4 top_padding 	60 # for polybar on monitor 1
+bspc config -m DP-0 top_padding 	2 # for polybar on monitor 2
+bspc config bottom_padding 	2
+
+bspc rule -a Nm-connection-editor state=floating
+bspc rule -a Thunar state=floating
+bspc rule -a Gnome-system-monitor state=floating 
+
+# Wallpaper Stuff
+feh --bg-fill "$WP_PATH" & # sets wallpaper on login
+
+wal -i "$WP_PATH" -n & # invokes pywal with image and also colors dunst accordingly
+
+. "$HOME/.cache/wal/colors.sh" & # sets a color theme based on the wallpaper
+
+# Configures colors for windows
+bspc config normal_border_color "$color1"
+bspc config active_border_color "$color2"
+bspc config focused_border_color "$color15"
+
+# Launch polybar
+$HOME/.config/polybar/tpm-cherryblocks/launch.sh &
+
+# Launch eww daemon
+eww daemon
+
+# Launch picom
+picom &
+
+# Start the dock (using plank)
+sh $HOME/.config/plank/launch.sh
+
+# Start dunst with the correct colors from pywal
+# TODO Figure out why this requires a 2x reload to change the colors
+sh $HOME/.config/dunst/launch.sh
+
+# Notify user we're done loading
+dunstify -u LOW "Loaded BSPWM, remember to regenerate themes if necessary"

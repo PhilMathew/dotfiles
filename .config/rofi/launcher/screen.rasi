@@ -1,0 +1,114 @@
+/* EDITED FROM THE PERSON IN THE COMMENT BELOW
+ * THIS ONE
+ */
+
+/*
+ *
+ * Author  : Aditya Shakya
+ * Mail    : adi1090x@gmail.com
+ * Github  : @adi1090x
+ * Twitter : @adi1090x
+ *
+ */
+
+configuration {
+    show-icons:                     true;
+    icon-theme:                     "Yaru";
+    display-drun: 					" ";
+    drun-display-format:            "{name}";
+    disable-history:                false;
+    fullscreen:                     true;
+	hide-scrollbar: 				true;
+	sidebar-mode: 					false;
+}
+
+@import "~/.cache/wal/colors-rofi-dark.rasi"
+@import "~/.config/rofi/shared/font.rasi"
+
+window {
+    transparency:                   "real";
+    background-color:               @background;
+    text-color:                     @foreground;
+	border:							0px;
+	border-color:					@border;
+    border-radius:                  0px;
+}
+
+prompt {
+    enabled: 						true;
+	padding: 						0.25% 0.75% 0% -0.25%;
+	background-color: 				@selected-normal-background;
+	text-color: 					@foreground;
+	font:							@small-icon-font;
+}
+
+entry {
+    background-color:               @selected-normal-background;
+    text-color:                     @foreground;
+    placeholder-color:              @foreground;
+    expand:                         true;
+    horizontal-align:               0;
+    placeholder:                    "Search Applications";
+    padding:                        0% 0% 0% 0%;
+    blink:                          true;
+}
+
+inputbar {
+	children: 						[ prompt, entry ];
+    background-color:               @selected-normal-background;
+    text-color:                     @foreground;
+    expand:                         false;
+	border:							0% 0% 0.3% 0.2%;
+    border-radius:                  10%;
+	border-color:					@border-color;
+    margin:                         0% 50% 0% 0%;
+    padding:                        1.25%;
+}
+
+listview {
+    background-color:               @alternate-normal-background;
+    columns:                        8;
+    lines:	                        3;
+    spacing:                        1.3%;
+    cycle:                          false;
+    dynamic:                        true;
+    layout:                         vertical;
+}
+
+mainbox {
+    background-color:               @alternate-normal-background;
+	border:							0% 0% 0% 0%;
+    border-radius:                  0% 0% 0% 0%;
+	border-color:					@accent;
+    children:                       [ inputbar, listview ];
+    spacing:                       	5%;
+    padding:                        15% 10% 10% 10%;
+}
+
+element {
+    background-color:               @alternate-normal-background;
+    text-color:                     @foreground;
+    orientation:                    vertical;
+    border-radius:                  0%;
+    padding:                        3% 0% 3% 0.5%;
+}
+
+element-icon {
+    size:                           80px;
+    border:                         0px;
+}
+
+element-text {
+    expand:                         true;
+    horizontal-align:               0.5;
+    vertical-align:                 0.5;
+    margin:                         0.5% 0.5% -0.5% 0.5%;
+}
+
+element selected {
+    background-color:               @selected-active-background;
+    text-color:                     @foreground;
+	border:							0% 0% 0.3% 0.2%;
+    border-radius:                  25px;
+    border-color:                  	@border;
+}

@@ -1,0 +1,17 @@
+# Configuration for Alacritty, the GPU enhanced terminal emulator.
+
+
+# Font configuration
+font:
+  # Normal (roman) font face
+  normal:
+    # Font family
+    
+    # Default:
+    #   - (macOS) Menlo
+    #   - (Linux/BSD) monospace
+    #   - (Windows) Consolas
+    family: "MesloLGS NF"
+
+  # Point size
+  size: 10.0

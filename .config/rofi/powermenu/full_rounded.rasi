@@ -1,0 +1,88 @@
+/* EDITED FROM DUDE BELOW */
+
+
+/*
+ *
+ * Author  : Aditya Shakya
+ * Mail    : adi1090x@gmail.com
+ * Github  : @adi1090x
+ * Twitter : @adi1090x
+ *
+ */
+
+configuration {
+    show-icons:                     false;
+    drun-display-format:            "{name}";
+    disable-history:                false;
+    fullscreen:                     true;
+	hide-scrollbar: 				true;
+	sidebar-mode: 					false;
+}
+
+@import "~/.cache/wal/colors-rofi-dark.rasi"
+@import "~/.config/rofi/shared/font.rasi"
+
+* {
+    font: @large-icon-font;
+}
+
+window {
+    transparency:                   "real";
+    background-color:               @background;
+    text-color:                     @foreground;
+    border-radius:                  0px;
+}
+
+listview {
+    background-color:               @background;
+    margin:                         0% 0% 0% 0%;
+    spacing:                        10%;
+    cycle:                          true;
+    dynamic:                        true;
+    layout:                         horizontal;
+}
+
+mainbox {
+    background-color:               @background;
+    children:                       [ listview ];
+    padding:                        30% 0% 0% 15.5%;
+}
+
+element {
+    background-color:               @alternate-normal-background;
+    text-color:                     @foreground;
+    orientation:                    horizontal;
+    border-radius:                  25px;
+    padding:                        17;
+}
+
+element normal.urgent,
+element alternate.urgent {
+    background-color:               @urgent;
+    text-color:                     @foreground;
+    border-radius:                  0.2%;
+}
+
+element normal.active,
+element alternate.active {
+    background-color:               @alternate-normal-background;
+    text-color:                     @foreground;
+}
+
+element selected {
+    background-color:               @selected;
+    text-color:                     @foreground;
+    border:                  		0% 0% 0% 0%;
+    border-radius:                  25px;
+    border-color:                  	@border;
+}
+
+element selected.urgent {
+    background-color:               @urgent;
+    text-color:                     @foreground;
+}
+
+element selected.active {
+    background-color:               @alternate-normal-background;
+    color:                          @foreground;
+}
