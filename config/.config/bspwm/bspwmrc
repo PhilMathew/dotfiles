@@ -28,6 +28,8 @@ bspc config -m DP-4 top_padding 	60 # for polybar on monitor 1
 bspc config -m DP-0 top_padding 	2 # for polybar on monitor 2
 bspc config bottom_padding 	2
 
+bspc rule -a Plank layer=above manage=on border=off # plank makes me lose my sanity
+
 bspc rule -a Nm-connection-editor state=floating
 bspc rule -a Thunar state=floating
 bspc rule -a Gnome-system-monitor state=floating 

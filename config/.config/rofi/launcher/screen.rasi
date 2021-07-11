@@ -1,15 +1,4 @@
-/* EDITED FROM THE PERSON IN THE COMMENT BELOW
- * THIS ONE
- */
-
-/*
- *
- * Author  : Aditya Shakya
- * Mail    : adi1090x@gmail.com
- * Github  : @adi1090x
- * Twitter : @adi1090x
- *
- */
+/* Fullscreen app launcher */
 
 configuration {
     show-icons:                     true;

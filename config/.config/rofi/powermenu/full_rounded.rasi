@@ -1,14 +1,4 @@
-/* EDITED FROM DUDE BELOW */
-
-
-/*
- *
- * Author  : Aditya Shakya
- * Mail    : adi1090x@gmail.com
- * Github  : @adi1090x
- * Twitter : @adi1090x
- *
- */
+/* Power/sleep/logout/etc menu */
 
 configuration {
     show-icons:                     false;

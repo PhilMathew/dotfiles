@@ -9,7 +9,7 @@ fi
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/phil/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -109,14 +109,14 @@ source $ZSH/oh-my-zsh.sh
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/phil/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+__conda_setup="$('$HOME/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/phil/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/phil/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "$HOME/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "$HOME/anaconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/home/phil/anaconda3/bin:$PATH"
+        export PATH="$HOME/anaconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
@@ -135,6 +135,6 @@ sh "$HOME/.cache/wal/colors.sh"
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # spicetify stuff
-export SPICETIFY_INSTALL="/home/phil/spicetify-cli"
+export SPICETIFY_INSTALL="$HOME/spicetify-cli"
 export PATH="$SPICETIFY_INSTALL:$PATH"
 

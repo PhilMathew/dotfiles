@@ -1,12 +1,5 @@
 #!/usr/bin/env bash
 
-## EDITED FROM PERSON BELOW
-
-## Author  : Aditya Shakya
-## Mail    : adi1090x@gmail.com
-## Github  : @adi1090x
-## Twitter : @adi1090x
-
 theme="full_rounded"
 dir="$HOME/.config/rofi/powermenu"
 
