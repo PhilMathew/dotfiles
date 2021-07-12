@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# TODO Find a way to automatically clean out the mess from jumpapp
-
 # First-time setup script for cooking up the rice
 
 # Ensures that the script is run as root

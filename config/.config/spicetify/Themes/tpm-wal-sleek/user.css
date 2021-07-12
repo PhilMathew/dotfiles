@@ -332,11 +332,3 @@ p.main-buddyFeed-timestamp.main-type-finale {
 .x-sortBox-sortDropdown {
     background-color: var(--spice-card) !important;
 }
-
-._8e566af0d3a8e6834c933615bbb634ba-scss {
-    color: var(--spice-subtext) !important;
-}
-
-._8e566af0d3a8e6834c933615bbb634ba-scss:focus, ._8e566af0d3a8e6834c933615bbb634ba-scss:hover {
-    color: var(--spice-text) !important;
-}
