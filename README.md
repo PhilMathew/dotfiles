@@ -3,13 +3,13 @@
 
 # Screenshots
 
-![Screenshot](project-phi-mkI/project-phi-mkI.png)
+![Screenshot](project-phi-mkI-screenshots/project-phi-mkI.png)
 
-![Screenshot](project-phi-mkI/project-phi-mkI-windows.png)
+![Screenshot](project-phi-mkI-screenshots/project-phi-mkI-windows.png)
 
-![Screenshot](project-phi-mkI/project-phi-mkI-apps.png)
+![Screenshot](project-phi-mkI-screenshots/project-phi-mkI-apps.png)
 
-![Screenshot](project-phi-mkI/project-phi-mkI-powermenu.png)
+![Screenshot](project-phi-mkI-screenshots/project-phi-mkI-powermenu.png)
 
 # Features
 Project Φ was built around a few main pillars
