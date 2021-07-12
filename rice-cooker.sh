@@ -20,7 +20,7 @@ sh stow-dirs.sh # makes symlinks
 pip3 install pywal
 
 # Installs apt packages
-apt install -y bspwm alacritty zsh feh neofetch rofi polybar plank dunst oomox spotify-client thunar zathura
+apt install -y bspwm alacritty zsh feh neofetch rofi polybar plank dunst oomox spotify-client thunar zathura lxappearance
 
 # Oh-My-ZSH and Powerlevel10k (along with its fonts)
 # TODO ADD FONT INSTALLS

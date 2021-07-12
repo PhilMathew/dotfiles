@@ -11,7 +11,6 @@
 
 ![Screenshot](project-phi-mkI/project-phi-mkI-powermenu.png)
 
-
 # Features
 Project Φ was built around a few main pillars
 * Usability - if it was a pain to use daily then I'd just stick with default Ubuntu
@@ -50,14 +49,27 @@ There are a bunch of other minor items like alacritty, spicetify, oh-my-zsh, etc
 You may notice there's not really a lockscreen. Honestly I don't lock my personal computer all too much and trying to get one working was too much effort. In the future, if I find it necessary, I'd like to just use the same locking mechanism that gnome uses for default Ubuntu, but I really don't know how to get that working currently.
 
 # Installation
-This part's the fun bit, since I tried to make it as simple as possible (mostly for myself). The following steps should get everything sorted. Fonts, packages, everything except the wallpaper should be acquired through this process.
+This part's the fun bit, since I tried to make it as simple as possible (mostly for myself). The following steps should get everything sorted. 
 
+Note that this assumes one is using Ubuntu 20.10 or later. If you're using another distro...figure it out then idfk lol.
+
+Now, while it pains me to do this, I can't find a way to automate some of the fonts and the cursor, so we have to get them out of the way first
+
+## Fonts and Cursor
+The following items are needed for the rice to work:
+* [Noto Sans](https://www.google.com/get/noto/#sans-lgc)
+* [MesloLGS NF](https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k) (for powerlevel10k)
+* Material Design Icons (handled in later steps, since it actually can be gotten through apt)
+* [Sweet-cursors](https://www.gnome-look.org/p/1393084/) (cursor theme) 
+
+## The Rice Cooker
+Now for the fun part: the rice cooker. Follow these steps for glory.
 1) Clone this repository
 2) Run ```cd dotfiles```
 3) Run ```rice-cooker.sh``` as root
 4) Reboot and log back in to bspwm
 5) Run ```sh ~/.config/bspwm/regen-theme.sh``` to get your theming all set up
-6) Have at it!
+6) Set gtk and cursor themes through lxappearance
 
 While I'm certain this will break for some others, from my testing on a fresh install of Ubuntu, this should work perfectly fine.
 
