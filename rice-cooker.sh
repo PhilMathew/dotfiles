@@ -11,12 +11,12 @@ fi
 
 echo "Cooking Rice"
 
-# # Clone and link dotfiles first (so that the .config directory doesn't cause issues later)
-# git clone https://github.com/PhilMathew/dotfiles.git
-# cd dotfiles
-# chmod +x config/dunst/launch.sh config/plank/launch.sh config/polybar/tpm-cherryblocks/launch.sh config/polybar/tpm-cherryblocks/spotifystatus.sh config/rofi/launcher/launcher.sh config/rofi/powermenu/powermenu.sh 
-# apt install stow # symlinking utility
-# sh stow-dirs.sh # makes symlinks 
+# Clone and link dotfiles first (so that the .config directory doesn't cause issues later)
+git clone https://github.com/PhilMathew/dotfiles.git
+cd dotfiles
+chmod +x config/dunst/launch.sh config/plank/launch.sh config/polybar/tpm-cherryblocks/launch.sh config/polybar/tpm-cherryblocks/spotifystatus.sh config/rofi/launcher/launcher.sh config/rofi/powermenu/powermenu.sh 
+apt install stow # symlinking utility
+sh stow-dirs.sh # makes symlinks 
 
 # Install pywal
 pip3 install pywal
