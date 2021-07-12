@@ -58,7 +58,7 @@ Now, while it pains me to do this, I can't find a way to automate some of the fo
 ## Fonts and Cursor
 The following items are needed for the rice to work:
 * [Noto Sans](https://www.google.com/get/noto/#sans-lgc)
-* [MesloLGS NF](https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k) (for powerlevel10k)
+* [MesloLGS NF](https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k) (for powerlevel10k; download the 4 .ttf files in the link)
 * Material Design Icons (handled in later steps, since it actually can be gotten through apt)
 * [Sweet-cursors](https://www.gnome-look.org/p/1393084/) (cursor theme) 
 
