@@ -12,8 +12,6 @@ fi
 echo "Cooking Rice"
 
 # Clone and link dotfiles first (so that the .config directory doesn't cause issues later)
-git clone https://github.com/PhilMathew/dotfiles.git
-cd dotfiles
 chmod +x config/dunst/launch.sh config/plank/launch.sh config/polybar/tpm-cherryblocks/launch.sh config/polybar/tpm-cherryblocks/spotifystatus.sh config/rofi/launcher/launcher.sh config/rofi/powermenu/powermenu.sh 
 apt install stow # symlinking utility
 sh stow-dirs.sh # makes symlinks 
@@ -35,8 +33,7 @@ chmod a+wr /usr/share/spotify # get write perms on spotify files
 chmod a+wr /usr/share/spotify/Apps -R
 
 # jumpapp utility (only for the spotify icon rn, but it's handy)
-# Note that this install script is copited directly from https://github.com/mkropat/jumpapp
-# mkdir $HOME/Downloads/ricing-utils
+# Note that this install script is copited directly from the repo
 apt-get install build-essential debhelper git pandoc shunit2
 git clone https://github.com/mkropat/jumpapp.git
 cd jumpapp
@@ -44,7 +41,10 @@ make deb
 dpkg -i jumpapp*all.deb
 # if there were missing dependencies
 apt-get install -f
-# clean up the mess
-rm -rf jumpapp*
+
+# Theme up zathura with pywal (instructions from repo itself)
+git clone https://github.com/GideonWolfe/Zathura-Pywal.git
+cd Zathura-Pywal
+sh install.sh
 
 echo "Congrats, the rice has been successfully cooked up. Please reboot before logging back into bspwm"
