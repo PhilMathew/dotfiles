@@ -8,10 +8,10 @@ uptime=$(uptime -p | sed -e 's/up //g')
 rofi_command="rofi -theme $dir/$theme"
 
 # Options
-shutdown=""
-reboot=""
-suspend=""
-logout=""
+shutdown=""
+reboot=""
+suspend=""
+logout=""
 
 # Confirmation
 confirm_exit() {
