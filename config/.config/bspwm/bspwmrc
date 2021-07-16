@@ -7,12 +7,15 @@ export WP_URI=$(gsettings get org.gnome.desktop.background picture-uri)
 export WP_PATH=$(echo "$WP_URI" | sed -E 's/^\s*.*:\/\///g')
 export WP_PATH=${WP_PATH%\'}
 
+# Specifies default cursor's path
+export CURSORS_PATH="$HOME/.icons/Sweet-cursors/cursors/left_ptr"
+
 # bspwm initialization and config
 pkill -USR1 -x sxhkd
 pgrep -x sxhkd > /dev/null || sxhkd & # runs sxhkd for the keybinds
 bspc monitor DP-4 -d I II III IV V VI VII VIII IX X # creates workspaces
 
-gsettings set org.gnome.desktop.interface cursor-theme 'Sweet-cursors'
+xsetroot -xcf "$CURSORS_PATH" 24 & # sets the bloody cursor to not be a fugly X
 
 # Pretty self-explanatory
 bspc config border_width         2
