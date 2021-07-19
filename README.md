@@ -50,6 +50,7 @@ You may notice there's not really a lockscreen. Honestly I don't lock my persona
 
 # Installation
 *NOTE: THIS IS STILL MOSTLY A WIP, ERRORS ARE TO BE EXPECTED CURRENTLY*
+
 This part's the fun bit, since I tried to make it as simple as possible (mostly for myself). The following steps should get everything sorted. 
 
 Note that this assumes one is using Ubuntu 20.10 or later. If you're using another distro...figure it out then idfk lol.
