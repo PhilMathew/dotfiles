@@ -49,6 +49,7 @@ There are a bunch of other minor items like alacritty, spicetify, oh-my-zsh, etc
 You may notice there's not really a lockscreen. Honestly I don't lock my personal computer all too much and trying to get one working was too much effort. In the future, if I find it necessary, I'd like to just use the same locking mechanism that gnome uses for default Ubuntu, but I really don't know how to get that working currently.
 
 # Installation
+*NOTE: THIS IS STILL MOSTLY A WIP, ERRORS ARE TO BE EXPECTED CURRENTLY*
 This part's the fun bit, since I tried to make it as simple as possible (mostly for myself). The following steps should get everything sorted. 
 
 Note that this assumes one is using Ubuntu 20.10 or later. If you're using another distro...figure it out then idfk lol.
@@ -70,8 +71,6 @@ Now for the fun part: the rice cooker. Follow these steps for glory.
 4) Reboot and log back in to bspwm
 5) Run ```sh ~/.config/bspwm/regen-theme.sh``` to get your theming all set up
 6) Set gtk and cursor themes through lxappearance
-
-While I'm certain this will break for some others, from my testing on a fresh install of Ubuntu, this should work perfectly fine.
 
 # Acknowledgements
 Aside from all the creators and contributors involved in the amazing softwares used in this rice, I have a few special thanks to give to some folks.
