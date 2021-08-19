@@ -150,7 +150,7 @@ content-padding = 5
 type = internal/date
 interval = 10
 
-date = "%B %d, %Y"
+date = "%b. %d, %Y"
 
 label = %date%
 label-padding = 5
