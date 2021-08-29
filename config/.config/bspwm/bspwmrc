@@ -61,7 +61,9 @@ sh $HOME/.config/plank/launch.sh
 # TODO Figure out why this requires a 2x reload to change the colors
 sh $HOME/.config/dunst/launch.sh
 
+# Lockscren stuff
 xss-lock betterlockscreen -l dimblur &
+xautolock -locker "betterlockscreen -l dimblur" -time 5 &
 
 # Notify user we're done loading
 notify-send -u LOW "Loaded BSPWM, remember to regenerate themes if necessary"
