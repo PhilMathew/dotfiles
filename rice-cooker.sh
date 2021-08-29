@@ -12,7 +12,7 @@ fi
 echo "Cooking Rice"
 
 # Clone and link dotfiles first (so that the .config directory doesn't cause issues later)
-chmod +x config/dunst/launch.sh config/plank/launch.sh config/polybar/tpm-cherryblocks/launch.sh config/polybar/tpm-cherryblocks/spotifystatus.sh config/rofi/launcher/launcher.sh config/rofi/powermenu/powermenu.sh 
+chmod +x $HOME/dotfiles/config/dunst/launch.sh $HOME/dotfiles/config/plank/launch.sh $HOME/dotfiles/config/polybar/tpm-cherryblocks/launch.sh $HOME/dotfiles/config/polybar/tpm-cherryblocks/spotifystatus.sh $HOME/dotfiles/config/rofi/launcher/launcher.sh $HOME/dotfiles/config/rofi/powermenu/powermenu.sh 
 apt install stow # symlinking utility
 sh stow-dirs.sh # makes symlinks 
 
@@ -20,7 +20,34 @@ sh stow-dirs.sh # makes symlinks
 pip3 install pywal
 
 # Installs apt packages
-apt install -y bspwm alacritty zsh feh neofetch rofi polybar plank dunst oomox spotify-client thunar zathura lxappearance fonts-material-design-icons-iconfont  
+add-apt-repository ppa:aslatter/ppa
+apt install alacritty 
+
+apt install bspwm 
+
+apt install zsh 
+
+apt install feh 
+
+apt install neofetch 
+
+apt install picom
+
+apt install rofi 
+apt install polybar 
+apt install plank 
+apt install dunst 
+
+apt install thunar 
+apt install zathura 
+apt install lxappearance 
+
+apt install fonts-material-design-icons-iconfont  
+
+# Spotify
+curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | sudo apt-key add - 
+echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
+sudo apt-get update && sudo apt-get install spotify-client
 
 # Oh-My-ZSH and Powerlevel10k (along with its fonts)
 # TODO ADD FONT INSTALLS
