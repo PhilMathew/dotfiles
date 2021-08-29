@@ -17,6 +17,8 @@ apt install stow # symlinking utility
 sh stow-dirs.sh # makes symlinks 
 
 # Install pywal
+apt install python3-pip
+apt install imagemagick
 pip3 install pywal
 
 # Installs apt packages
@@ -47,7 +49,8 @@ apt install fonts-material-design-icons-iconfont
 # Spotify
 curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | sudo apt-key add - 
 echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
-sudo apt-get update && sudo apt-get install spotify-client
+apt-get update && apt-get install spotify-client
+apt get install playerctl
 
 # Oh-My-ZSH and Powerlevel10k (along with its fonts)
 # TODO ADD FONT INSTALLS

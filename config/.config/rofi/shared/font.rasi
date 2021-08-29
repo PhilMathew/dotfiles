@@ -2,6 +2,6 @@
 
 * {
 	font:				"Noto Sans 15";
-	large-icon-font:	"Material Design Icons 100";
+	large-icon-font:	"Material Design Icons 70";
 	small-icon-font: 	"Material Design Icons 17";
 }

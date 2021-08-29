@@ -44,21 +44,19 @@ border-color = ${self.foreground}
 height = 50
 
 background = ${colors.background}
-override-redirect=true
+override-redirect=false
 offset-y = 10
 
 wm-restack = bspwm
 
 [bar/ws]
 inherit = bar/base
-width = 17.6%
+width = 23.45%
 bottom = false
-
-monitor = DP-4
 
 foreground = ${colors.color1}
 
-offset-x = 41.2%
+offset-x = 38.9%
 
 ; bspwm
 modules-left = stats bspwm apps
@@ -70,8 +68,6 @@ inherit = bar/base
 enable-ipc = true
 width = 25.5%
 
-monitor = DP-4
-
 foreground = ${colors.color2}
 offset-x = 10
 ; Spotify (uses playerctl)
@@ -80,12 +76,10 @@ modules-right = spotlaunch
 
 [bar/tray]
 inherit = bar/base
-width = 26.7%
-offset-x = 72.8%
+width = 31.3%
+offset-x = 67.8%
 foreground = ${colors.color2}
 modules-left = volbar wifi date time power
-
-monitor = DP-4
 
 
 ;                      _       _           
