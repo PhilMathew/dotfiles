@@ -76,10 +76,10 @@ modules-right = spotlaunch
 
 [bar/tray]
 inherit = bar/base
-width = 42.3%
-offset-x = 56.9%
+width = 42.9%
+offset-x = 56.5%
 foreground = ${colors.color2}
-modules-left = volbar wifi battery date time power
+modules-right = volbar wifi battery date time power
 
 
 ;                      _       _           
