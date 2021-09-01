@@ -162,6 +162,9 @@ format-charging-padding = 5
 format-discharging = <ramp-capacity> <label-discharging>
 format-discharging-padding = 5
 
+format-full = <ramp-capacity> <label-full>
+format-full-padding = 5
+
 ; Available tags:
 ;   <label-full> (default)
 ;   <bar-capacity>
