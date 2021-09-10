@@ -42,6 +42,9 @@ wal -i "$WP_PATH" -n # invokes pywal with image and also colors dunst accordingl
 
 . "$HOME/.cache/wal/colors.sh" # sets a color theme based on the wallpaper
 
+# Betterlockscreen
+betterlockscreen -u $WP_PATH &
+
 # Configures colors for windows
 bspc config normal_border_color "$color1"
 bspc config active_border_color "$color2"
@@ -59,6 +62,10 @@ sh $HOME/.config/plank/launch.sh
 # Start dunst with the correct colors from pywal
 # TODO Figure out why this requires a 2x reload to change the colors
 sh $HOME/.config/dunst/launch.sh
+
+# Lockscren stuff
+xss-lock betterlockscreen -l dimblur &
+xautolock -locker "betterlockscreen -l dimblur" -time 5 &
 
 # Notify user we're done loading
 notify-send -u LOW "Loaded BSPWM, remember to regenerate themes if necessary"

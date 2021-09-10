@@ -9,6 +9,8 @@ config/.config/*
 
 !**/alacritty/
 
+!**/betterlockscreenrc
+
 !**/bspwm
 
 !**/dunst

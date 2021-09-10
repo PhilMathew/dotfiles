@@ -12,15 +12,45 @@ fi
 echo "Cooking Rice"
 
 # Clone and link dotfiles first (so that the .config directory doesn't cause issues later)
-chmod +x config/dunst/launch.sh config/plank/launch.sh config/polybar/tpm-cherryblocks/launch.sh config/polybar/tpm-cherryblocks/spotifystatus.sh config/rofi/launcher/launcher.sh config/rofi/powermenu/powermenu.sh 
+chmod +x $HOME/dotfiles/config/dunst/launch.sh $HOME/dotfiles/config/plank/launch.sh $HOME/dotfiles/config/polybar/tpm-cherryblocks/launch.sh $HOME/dotfiles/config/polybar/tpm-cherryblocks/spotifystatus.sh $HOME/dotfiles/config/rofi/launcher/launcher.sh $HOME/dotfiles/config/rofi/powermenu/powermenu.sh 
 apt install stow # symlinking utility
 sh stow-dirs.sh # makes symlinks 
 
 # Install pywal
+apt install python3-pip
+apt install imagemagick
 pip3 install pywal
 
 # Installs apt packages
-apt install -y bspwm alacritty zsh feh neofetch rofi polybar plank dunst oomox spotify-client thunar zathura lxappearance fonts-material-design-icons-iconfont  
+add-apt-repository ppa:aslatter/ppa
+apt install alacritty 
+
+apt install bspwm 
+
+apt install zsh 
+
+apt install feh 
+
+apt install neofetch 
+
+apt install picom
+
+apt install rofi 
+apt install polybar 
+apt install plank 
+apt install dunst 
+
+apt install thunar 
+apt install zathura 
+apt install lxappearance 
+
+apt install fonts-material-design-icons-iconfont  
+
+# Spotify
+curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | sudo apt-key add - 
+echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
+apt-get update && apt-get install spotify-client
+apt get install playerctl
 
 # Oh-My-ZSH and Powerlevel10k (along with its fonts)
 # TODO ADD FONT INSTALLS
@@ -41,6 +71,19 @@ make deb
 dpkg -i jumpapp*all.deb
 # if there were missing dependencies
 apt-get install -f
+
+# Lockscreen utils
+apt-get install xss-lock xautolock
+#i3lock-color
+apt install imagemagick autoconf gcc make pkg-config libpam0g-dev libcairo2-dev libfontconfig1-dev libxcb-composite0-dev libev-dev libx11-xcb-dev libxcb-xkb-dev libxcb-xinerama0-dev libxcb-randr0-dev libxcb-image0-dev libxcb-util-dev libxcb-xrm-dev libxcb-xtest0-dev libxkbcommon-dev libxkbcommon-x11-dev libjpeg-dev
+git clone https://github.com/Raymo111/i3lock-color.git
+cd i3lock-color
+./install-i3lock-color.sh
+# betterlockscreen
+git clone https://github.com/betterlockscreen/betterlockscreen.git
+cd betterlockscreen/
+./install.sh system
+
 
 # Theme up zathura with pywal (instructions from repo itself)
 git clone https://github.com/GideonWolfe/Zathura-Pywal.git
