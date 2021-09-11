@@ -18,6 +18,10 @@ super + Escape
 super + shift + s
 	systemctl suspend
 
+# lock the thing
+super + l
+	betterlockscreen -l dimblur
+
 #
 # bspwm hotkeys
 #
