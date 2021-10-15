@@ -1,7 +1,7 @@
 /* Defines the fonts for all the rofi things to use */
 
 * {
-	font:				"Noto Sans 15";
-	large-icon-font:	"Material Design Icons 70";
-	small-icon-font: 	"Material Design Icons 17";
+	font:				"Noto Sans 20";
+	large-icon-font:	"Material Design Icons 90";
+	small-icon-font: 	"Material Design Icons 20";
 }

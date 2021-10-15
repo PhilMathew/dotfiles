@@ -31,8 +31,8 @@ volbg = ${xrdb:color4}
 
 [bar/base]
 enable-ipc = true
-font-0=NotoSansCJKJP:style=regular:size=16:antialias=true;5
-font-1=MaterialDesignIcons:style=Regular:pixelsize=10:antialias=true;2
+font-0=NotoSansCJKJP:style=regular:size=20:antialias=true;5
+font-1=MaterialDesignIcons:style=Regular:pixelsize=13:antialias=true;2
 font-2=IPAGothic:style=Regular:size=11:antialias=true;3
 font-3=MaterialDesignIcons:style=Bold:size=26:antialias=true;5
 font-4=MaterialDesignIcons:style=Bold:size=21:antialias=true;5
@@ -41,7 +41,7 @@ bottom = false
 border-size = 0
 border-color = ${self.foreground}
 
-height = 50
+height = 60
 
 background = ${colors.background}
 override-redirect=false
@@ -51,7 +51,7 @@ wm-restack = bspwm
 
 [bar/ws]
 inherit = bar/base
-width = 18.65%
+width = 19.95%
 bottom = false
 
 foreground = ${colors.color1}
@@ -76,8 +76,8 @@ modules-right = spotlaunch
 
 [bar/tray]
 inherit = bar/base
-width = 42.9%
-offset-x = 56.5%
+width = 39.9%
+offset-x = 59.5%
 foreground = ${colors.color2}
 modules-right = volbar wifi battery date time power
 
@@ -265,7 +265,7 @@ label-padding = 5
 
 [module/wifi]
 type = internal/network
-interface = wlp107s0
+interface = wlp242s0
 interval = 10
 
 format-disconnected = <label-disconnected>
