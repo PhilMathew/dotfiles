@@ -56,7 +56,7 @@ bottom = false
 
 foreground = ${colors.color1}
 
-offset-x = 32.9%
+offset-x = 35.5%
 
 ; bspwm
 modules-left = stats bspwm apps
@@ -66,7 +66,7 @@ scroll-down = bspwm-deskprev
 [bar/music]
 inherit = bar/base
 enable-ipc = true
-width = 25.5%
+width = 30.5%
 
 foreground = ${colors.color2}
 offset-x = 10
@@ -351,7 +351,7 @@ click-left = "playerctl -p spotify play-pause"
 [module/spotify]
 type = custom/script
 exec =  playerctl -p spotify metadata --format '{{artist}} - {{title}}'
-label = %output:0:18:...%
+label = %output:0:30:...%
 exec-if = "pgrep spotify"
 format-padding = 3
 tail = true
