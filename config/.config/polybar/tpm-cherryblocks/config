@@ -299,7 +299,7 @@ format-volume-padding = 5
 label-volume = %{T4}   %{T-}
 label-volume-foreground = ${colors.color2}
 
-label-muted = %{T4}  %{T-} ─Muted─
+label-muted = %{T4}  %{T-} Muted
 label-muted-padding = 5
 
 bar-volume-width = 10
