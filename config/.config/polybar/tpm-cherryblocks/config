@@ -351,7 +351,7 @@ click-left = "playerctl -p spotify play-pause"
 [module/spotify]
 type = custom/script
 exec =  playerctl -p spotify metadata --format '{{artist}} - {{title}}'
-label = %output:0:30:...%
+label = %output:0:29:...%
 exec-if = "pgrep spotify"
 format-padding = 3
 tail = true

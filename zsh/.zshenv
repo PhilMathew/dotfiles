@@ -1,2 +1,2 @@
 alias python="python3"
-alias spotify="spicetify apply"
+#alias spotify="spicetify apply"
