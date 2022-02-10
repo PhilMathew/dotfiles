@@ -128,3 +128,6 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
+export PATH="/home/phil/.local/bin:$PATH"
+
