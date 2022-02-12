@@ -51,12 +51,12 @@ wm-restack = bspwm
 
 [bar/ws]
 inherit = bar/base
-width = 19.95%
+width = 20.5%
 bottom = false
 
 foreground = ${colors.color1}
 
-offset-x = 34.8%
+offset-x = 33.7%
 
 ; bspwm
 modules-left = stats bspwm apps
@@ -76,8 +76,8 @@ modules-right = spotlaunch
 
 [bar/tray]
 inherit = bar/base
-width = 41.1%
-offset-x = 58.5%
+width = 43.1%
+offset-x = 56.5%
 foreground = ${colors.color2}
 modules-right = volbar wifi battery date time power
 
@@ -257,7 +257,7 @@ type = internal/date
 interval = 10
 format-foreground = ${colors.color2}
 
-time = "%l:%M %p"
+time = %l:%M %p
 
 label = %time%
 label-padding = 5
@@ -351,7 +351,7 @@ click-left = "playerctl -p spotify play-pause"
 [module/spotify]
 type = custom/script
 exec =  playerctl -p spotify metadata --format '{{artist}} - {{title}}'
-label = %output:0:29:...%
+label = %output:0:20:...%
 exec-if = "pgrep spotify"
 format-padding = 3
 tail = true
