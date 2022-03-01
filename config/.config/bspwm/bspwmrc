@@ -34,6 +34,7 @@ bspc rule -a Plank layer=above manage=on border=off # plank makes me lose my san
 bspc rule -a Nm-connection-editor state=floating
 bspc rule -a Thunar state=floating
 bspc rule -a Gnome-system-monitor state=floating 
+bspc rule -a Zathura state=tiled
 
 # Wallpaper Stuff
 feh --bg-fill "$WP_PATH" & # sets wallpaper on login
