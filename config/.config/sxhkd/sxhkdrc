@@ -130,7 +130,7 @@ super + {Left,Down,Up,Right}
 
 
 #
-# Media Keys (REQUIRES playerctl and pactl)
+# Media Keys (REQUIRES playerctl, pactl, amixer, brightnessctl)
 #
 
 # play/pause, prev, next
@@ -142,5 +142,8 @@ XF86AudioMute
 # volume wheel
 XF86Audio{RaiseVolume,LowerVolume}
 	amixer -q -D pulse sset Master {5%+,5%-}   
+# brightness controls
+XF86MonBrightness{Up,Down}
+	brightnessctl s {10%+,10%-}
 
 

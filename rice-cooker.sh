@@ -44,7 +44,9 @@ apt install thunar
 apt install zathura 
 apt install lxappearance 
 
-apt install fonts-materialdesignicons-webfont  
+apt install fonts-materialdesignicons-webfont 
+
+apt install brightnessctl
 
 # Spotify
 curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | sudo apt-key add - 
