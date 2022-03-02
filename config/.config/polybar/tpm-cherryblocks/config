@@ -294,13 +294,13 @@ content-padding = 5
 type = internal/alsa
 
 format-volume = <label-volume> <bar-volume>
-format-volume-padding = 5
+format-volume-padding = 8
 
-label-volume = %{T4}   %{T-}
+label-volume = %{T4} %{T-}
 label-volume-foreground = ${colors.color2}
 
-label-muted = %{T4}  %{T-} Muted
-label-muted-padding = 5
+label-muted = %{T4} %{T-} Muted
+label-muted-padding = 14
 
 bar-volume-width = 10
 bar-volume-gradient = false
