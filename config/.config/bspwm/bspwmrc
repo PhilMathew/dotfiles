@@ -13,7 +13,8 @@ export CURSORS_PATH="$HOME/.icons/Sweet-cursors/cursors/left_ptr"
 # bspwm initialization and config
 pkill -USR1 -x sxhkd
 pgrep -x sxhkd > /dev/null || sxhkd & # runs sxhkd for the keybinds
-bspc monitor DP-4 -d I II III IV V VI VII VIII IX X # creates workspaces
+bspc monitor DP-4 -d I II III IV V VI VII VIII IX X # creates workspaces on monitor 1
+bspc monitor DP-0 -d I # workspaces on second monitor
 
 xsetroot -xcf "$CURSORS_PATH" 24 & # sets the bloody cursor to not be a fugly X
 
@@ -25,7 +26,7 @@ bspc config split_ratio          0.52
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
-bspc config -m DP-4 top_padding 	60 # for polybar on monitor 1
+bspc config -m dP-4 top_padding    60 # for polybar on monitor 1
 bspc config -m DP-0 top_padding 	2 # for polybar on monitor 2
 bspc config bottom_padding 	2
 

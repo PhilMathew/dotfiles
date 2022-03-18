@@ -54,7 +54,7 @@ inherit = bar/base
 width = 17.6%
 bottom = false
 
-monitor = DP-4
+;monitor = DP-4
 
 foreground = ${colors.color1}
 
@@ -70,7 +70,7 @@ inherit = bar/base
 enable-ipc = true
 width = 25.5%
 
-monitor = DP-4
+;monitor = DP-4
 
 foreground = ${colors.color2}
 offset-x = 10
@@ -85,7 +85,7 @@ offset-x = 72.8%
 foreground = ${colors.color2}
 modules-left = volbar wifi date time power
 
-monitor = DP-4
+;monitor = DP-4
 
 
 ;                      _       _           
