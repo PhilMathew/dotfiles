@@ -1,6 +1,7 @@
 #! /bin/sh
 
 xrandr --output DP-4 --primary --left-of DP-0
+xrandr --output DP-0 --rotate left
 
 # Get wallpaper path (allows it to be set from Ubuntu settings app)
 export WP_URI=$(gsettings get org.gnome.desktop.background picture-uri)
