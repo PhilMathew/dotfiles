@@ -21,6 +21,8 @@ window {
 	border:							0px;
 	border-color:					@border;
     border-radius:                  0px;
+    width:							100%;
+	height:							100%;
 }
 
 prompt {
@@ -83,11 +85,15 @@ element {
 }
 
 element-icon {
+    background-color:               inherit;
+    text-color:                     inherit;
     size:                           80px;
     border:                         0px;
 }
 
 element-text {
+    background-color:               inherit;
+    text-color:                     inherit;
     expand:                         true;
     horizontal-align:               0.5;
     vertical-align:                 0.5;

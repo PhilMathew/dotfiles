@@ -21,6 +21,8 @@ window {
     background-color:               @background;
     text-color:                     @foreground;
     border-radius:                  0px;
+    width:							100%;
+	height:							100%;
 }
 
 listview {
@@ -44,6 +46,16 @@ element {
     orientation:                    horizontal;
     border-radius:                  25px;
     padding:                        17;
+}
+
+element-icon {
+    background-color:               inherit;
+    text-color:                     inherit;
+}
+
+element-text {
+    background-color:               inherit;
+    text-color:                     inherit;
 }
 
 element normal.urgent,

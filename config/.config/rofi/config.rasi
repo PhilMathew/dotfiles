@@ -1,8 +1,9 @@
 /** Basic config file **/
 
+
+
 configuration {
   show-icons:         true;
   icon-theme:         "Yaru";
-  theme: "~/.cache/wal/colors-rofi-dark.rasi";
   modi: "window,drun,run,ssh";
 }

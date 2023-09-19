@@ -18,7 +18,7 @@
 
 [colors]
 
-background = ${xrdb:color0:#222}
+background = ${xrdb:color:#222}
 color1 = ${xrdb:color6}
 color2 = ${xrdb:color1}
 volbg = ${xrdb:color4}
@@ -31,10 +31,10 @@ volbg = ${xrdb:color4}
 
 [bar/base]
 enable-ipc = true
-font-0=NotoSansCJKJP:style=regular:size=20:antialias=true;5
+font-0=NotoMonoCJKJP:style=regular:size=20:antialias=true;5
 font-1=MaterialDesignIcons:style=Regular:pixelsize=13:antialias=true;2
 font-2=IPAGothic:style=Regular:size=11:antialias=true;3
-font-3=MaterialDesignIcons:style=Bold:size=26:antialias=true;5
+font-3=MaterialDesignIcons:style=Bold:size=21:antialias=true;5
 font-4=MaterialDesignIcons:style=Bold:size=21:antialias=true;5
 
 bottom = false
@@ -51,12 +51,12 @@ wm-restack = bspwm
 
 [bar/ws]
 inherit = bar/base
-width = 20.5%
+width = 19.89%
 bottom = false
 
 foreground = ${colors.color1}
 
-offset-x = 33.7%
+offset-x = 34.5%
 
 ; bspwm
 modules-left = stats bspwm apps
@@ -100,7 +100,7 @@ label-padding = 5
 type = internal/bspwm
 pin-workspaces = true
 format = <label-state>
-format-padding = 5
+; format-padding = 5
 format-background = ${colors.color1}
 format-foreground = ${colors.background}
 enable-click = true
@@ -225,7 +225,7 @@ animation-charging-framerate = 750
 type = custom/text
 content = %{T4}%{T-}
 click-left = "~/.config/rofi/powermenu/powermenu.sh"
-content-padding = 5
+content-padding = 4
 content-foreground = ${colors.background}
 content-background = ${colors.color2}
 
@@ -236,7 +236,7 @@ content = %{T4}%{T4}
 content-foreground = ${colors.background}
 content-background = ${colors.color1}
 click-left = "~/.config/rofi/launcher/launcher.sh"
-content-padding = 5
+content-padding = 4
 
 
 [module/date]
@@ -249,7 +249,7 @@ label-background = ${colors.color2}
 date = "%b. %d, %Y"
 
 label = %date%
-label-padding = 5
+label-padding = 4
 
 
 [module/time]
@@ -260,7 +260,7 @@ format-foreground = ${colors.color2}
 time = %l:%M %p
 
 label = %time%
-label-padding = 5
+label-padding = 4
 
 
 [module/wifi]
@@ -270,13 +270,13 @@ interval = 10
 
 format-disconnected = <label-disconnected>
 label-disconnected = %{T5}%{T-}
-label-disconnected-padding = 5
+label-disconnected-padding = 2
 label-disconnected-foreground = ${colors.background}
 label-disconnected-background = ${colors.color2}
 
 format-connected = <label-connected>
 label-connected = %{A1:nm-connection-editor:} %{T5}%{T-} %{A}
-label-connected-padding = 5
+label-connected-padding = 2
 label-connected-foreground = ${colors.background}
 label-connected-background = ${colors.color2}
 
@@ -287,22 +287,22 @@ content = %{T4}%{T-}
 content-foreground = ${colors.background}
 content-background = ${colors.color1}
 click-left = "gnome-system-monitor"
-content-padding = 5
+content-padding = 4
 
 
 [module/volbar]
 type = internal/alsa
 
 format-volume = <label-volume> <bar-volume>
-format-volume-padding = 8
+format-volume-padding = 2
 
 label-volume = %{T4} %{T-}
 label-volume-foreground = ${colors.color2}
 
 label-muted = %{T4} %{T-} Muted
-label-muted-padding = 14
+label-muted-padding = 4
 
-bar-volume-width = 10
+bar-volume-width = 8
 bar-volume-gradient = false
 bar-volume-indicator = %{T2}%{T-}
 bar-volume-indicator-font = 5
@@ -350,7 +350,7 @@ click-left = "playerctl -p spotify play-pause"
 
 [module/spotify]
 type = custom/script
-exec =  playerctl -p spotify metadata --format '{{artist}} - {{title}}'
+exec =  playerctl -p spotify metadata --format '{{title}} - {{artist}}'
 label = %output:0:20:...%
 exec-if = "pgrep spotify"
 format-padding = 3

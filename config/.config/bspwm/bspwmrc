@@ -1,9 +1,9 @@
 #! /bin/sh
 
-xinput set-prop 14 346 2, 2, 0 # wish I didn't have to do this here
+xinput set-prop 14 349 2, 2, 0 # wish I didn't have to do this here
 
 # Get wallpaper path (allows it to be set from Ubuntu settings app)
-export WP_URI=$(gsettings get org.gnome.desktop.background picture-uri)
+export WP_URI="$(gsettings get org.gnome.desktop.background picture-uri)"
 export WP_PATH=$(echo "$WP_URI" | sed -E 's/^\s*.*:\/\///g')
 export WP_PATH=${WP_PATH%\'}
 
@@ -12,7 +12,7 @@ export CURSORS_PATH="$HOME/.icons/Sweet-cursors/cursors/left_ptr"
 
 # bspwm initialization and config
 pkill -USR1 -x sxhkd
-pgrep -x sxhkd > /dev/null || sxhkd & # runs sxhkd for the keybindsR
+pgrep -USR1 -x sxhkd > /dev/null || sxhkd & # runs sxhkd for the keybindsR
 bspc monitor -d I II III IV V VI VII VIII # creates workspaces
 
 xsetroot -xcf "$CURSORS_PATH" 24 & # sets the bloody cursor to not be a fugly X
@@ -38,7 +38,7 @@ bspc rule -a Zathura state=tiled
 # Wallpaper Stuff
 feh --bg-fill "$WP_PATH" & # sets wallpaper on login
 
-wal -i "$WP_PATH" -n # invokes pywal with image and also colors dunst accordingly
+wal -i "$WP_PATH" -n # invokes pywal with image and also colors dunst accordingly1
 
 . "$HOME/.cache/wal/colors.sh" # sets a color theme based on the wallpaper
 
