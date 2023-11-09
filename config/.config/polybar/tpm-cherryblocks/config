@@ -56,7 +56,7 @@ bottom = false
 
 foreground = ${colors.color1}
 
-offset-x = 34.5%
+offset-x = 33.8%
 
 ; bspwm
 modules-left = stats bspwm apps
@@ -292,6 +292,9 @@ content-padding = 4
 
 [module/volbar]
 type = internal/alsa
+master-soundcard = default
+speaker-soundcard = default
+headphone-soundcard = default
 
 format-volume = <label-volume> <bar-volume>
 format-volume-padding = 2

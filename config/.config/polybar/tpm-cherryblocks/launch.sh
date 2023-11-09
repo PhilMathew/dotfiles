@@ -10,6 +10,4 @@ polybar -c $HOME/.config/polybar/tpm-cherryblocks/config -rq music &
 polybar -c $HOME/.config/polybar/tpm-cherryblocks/config  -rq tray &
 polybar -c $HOME/.config/polybar/tpm-cherryblocks/config -rq ws &
 
-
-
 echo "Polybar launched..."

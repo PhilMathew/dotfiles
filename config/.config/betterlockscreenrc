@@ -3,7 +3,7 @@
 # default options
 display_on=0
 span_image=true
-lock_timeout=120
+lock_timeout=12000
 fx_list=(dim blur dimblur pixel dimpixel color)
 dim_level=60
 blur_level=1
