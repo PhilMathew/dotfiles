@@ -1,6 +1,6 @@
 #! /bin/sh
 
-xinput set-prop 14 349 2, 2, 0 # wish I didn't have to do this here
+xinput set-prop 14 348 2, 2, 0 # wish I didn't have to do this here
 
 # Get wallpaper path (allows it to be set from Ubuntu settings app)
 export WP_URI="$(gsettings get org.gnome.desktop.background picture-uri)"
